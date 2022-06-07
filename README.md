@@ -1,7 +1,41 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+**först jag adderat webView i contentent main sidan med id. Andra är I Aktivera internet i android manifest sidan. Tredje ändring är jag har bytat namn i string sidan .
+Fyarde ändring är använda loadUrl() på external och internal sida så det visar två olika sidor när jag klickar OptionsItemSelected()
+
+
+```
+<resources>
+    <string name="app_name">My 2 App</string>
+    <string name="action_external_web">External Web Page</string>
+    <string name="action_internal_web">Internal Web Page</string>
+</resources>
+
+```
+This how i change the app name
+
+```
+ <WebView
+        android:id="@+id/myapp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp" />
+```
+This how im using conten_main.xml with webwiew
+
+```
+ myapp = findViewById(R.id.myapp);
+            myapp.getSettings().setJavaScriptEnabled(true);
+            myapp.setWebViewClient(new WebViewClient());
+            myapp.loadUrl("https://www.his.se/");
+```
+this is how i load the external webside
+**
+
 
 _Du kan ta bort all text som finns sedan tidigare_.
 
@@ -33,7 +67,7 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
+![](pic2.png)
 
 Läs gärna:
 
