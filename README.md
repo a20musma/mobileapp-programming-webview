@@ -1,19 +1,20 @@
 
 # Rapport
 
-**först jag adderat webView i contentent main sidan med id. Andra är I Aktivera internet i android manifest sidan. Tredje ändring är jag har bytat namn i string sidan .
-Fyarde ändring är använda loadUrl() på external och internal sida så det visar två olika sidor när jag klickar OptionsItemSelected()
-
-
+**
+since I can't change what is written in git I have only changed the rapport.
 ```
 <resources>
     <string name="app_name">My 2 App</string>
     <string name="action_external_web">External Web Page</string>
-    <string name="action_internal_web">Internal Web Page</string>
+    <string name="action_internal_web">Internal Web Page</string> 
 </resources>
 
+<uses-permission android:name="android.permission.INTERNET" />
+
 ```
-This how i change the app name
+This how i change the app name webview to my 2 app, also i have have added the interned asses in AndroidManifest.xml.
+
 
 ```
  <WebView
@@ -25,7 +26,7 @@ This how i change the app name
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="0dp" />
 ```
-This how im using conten_main.xml with webwiew
+the second thing that changed is conten_main.xml page  i added webView in the content main page with id as you see is myapp.
 
 ```
  myapp = findViewById(R.id.myapp);
@@ -33,7 +34,13 @@ This how im using conten_main.xml with webwiew
             myapp.setWebViewClient(new WebViewClient());
             myapp.loadUrl("https://www.his.se/");
 ```
-this is how i load the external webside
+the third I added i this code so that on external and internal page so it shows two different pages when I click OptionsItemSelected()
+
+```
+<include layout="@layout/content_main" />
+```
+the last thing i added a incluede element so that he webview is seen by this page activity_main
+
 **
 
 
